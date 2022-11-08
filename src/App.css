@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #353f53;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,33 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header h1{
+  background-color: rgb(101, 106, 128);
+  font-family:'Courier New', Courier, monospace;
+  font-size: 2em;
+  margin: 0;
+  padding: 1rem;
+}
+
+.App-header p{
+  background-color: rgb(101, 106, 128);
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1em;
+  width: 100%;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.App-header li{
+  background-color: rgb(101, 106, 128);
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1em;
+  list-style: decimal-leading-zero;
+  list-style-type:lower-greek;
+  text-align: left;
+  margin: 1rem;
 }
 
 .App-link {
