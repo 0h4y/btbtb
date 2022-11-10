@@ -8,10 +8,13 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-sm navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
+      <nav className="navbar navbar-expand-sm navbar-light bg-light bg-gradient">
+        <div className="container-fluid d-flex flex-row-reverse">
+          <a
+            className="navbar-brand p-1 bg-dark bg-gradient text-white"
+            href="#"
+          >
+            BTBTB-bordtennisbrödernastisdagsbollar
           </a>
           <button
             className="navbar-toggler"

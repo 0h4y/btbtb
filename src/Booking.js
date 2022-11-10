@@ -1,11 +1,10 @@
 import React from "react";
+import BookingForm from "./BookingForm";
 
 export function Booking() {
   return (
     <div>
-      <h1>BookSauna</h1>
-      <h1>BookCourt</h1>
-      <h1>BookChangingRoom</h1>
+      <BookingForm />
       <img
         className="BookingImg"
         src="./lockerRoom.jpg"
