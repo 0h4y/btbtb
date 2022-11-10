@@ -1,7 +1,7 @@
 .App {
   min-height: 80vh;
-  text-align: center;
   background-color: #353f53;
+  font-family: monospace;
 }
 
 .App-logo {

@@ -18,25 +18,78 @@ function BookingForm() {
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <div className="card text-center m-5">
-      <div className="card-header"> Boka bastu/bord/omkäldningsrum</div>
+    <div className="card text-left m-5">
+      <div className="card-header text-center">
+        {" "}
+        Boka bastu/bord/omkäldningsrum
+      </div>
+
       <form onSubmit={handleSubmit(onSubmit)}>
+        <div class="form-check ms-5 mt-5">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+            placeholder="sauna"
+            {...register("sauna", {})}
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Bastu
+          </label>
+        </div>
+
+        <div class="form-check ms-5">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+            placeholder="table"
+            {...register("table", {})}
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Bastu
+          </label>
+        </div>
+
+        <div class="form-check ms-5">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+            placeholder="lockerroom"
+            {...register("lockerroom", {})}
+          />
+          <label class="form-check-label" for="flexCheckDefault">
+            Bastu
+          </label>
+        </div>
+
         {/* register your input into the hook by invoking the "register" function */}
         <div className="form-floating m-5">
           <input
-            defaultValue="test"
-            {...register("example")}
+            {...register("example", { required: true })}
             className="form-control"
             id="floatingInput"
           />
-          <label for="floatingInput">Förnamn</label>
+          <label for="floatingInput">Namn</label>
         </div>
         {/* include validation with required or other standard HTML validation rules */}
-        <input {...register("exampleRequired", { required: true })} />
+        <div className="form-floating m-5">
+          <input
+            {...register("exampleRequired", { required: true })}
+            className="form-control"
+            id="floatingInput"
+          />
+
+          <label for="floatingInput"></label>
+        </div>
         {/* errors will return when field validation fails  */}
         {errors.exampleRequired && <span>This field is required</span>}
 
-        <input type="submit" />
+        <input type="submit" className="btn  btn-light m-5" />
       </form>
     </div>
   );
