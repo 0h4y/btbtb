@@ -1,5 +1,7 @@
 .App {
+  min-height: 80vh;
   text-align: center;
+  background-color: #353f53;
 }
 
 .App-logo {
@@ -14,8 +16,6 @@
 }
 
 .App-header {
-  background-color: #353f53;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,8 +37,6 @@
   font-family:'Courier New', Courier, monospace;
   font-size: 1em;
   width: 100%;
-  margin: 1rem;
-  padding: 2rem;
 }
 
 .App-header li{
