@@ -10,12 +10,12 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-sm navbar-light bg-light bg-gradient">
         <div className="container-fluid d-flex flex-row-reverse">
-          <a
+          <button
             className="navbar-brand p-1 bg-dark bg-gradient text-white"
             href="#"
           >
             BTBTB-bordtennisbrödernastisdagsbollar
-          </a>
+          </button>
           <button
             className="navbar-toggler"
             type="button"

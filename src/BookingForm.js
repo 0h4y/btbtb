@@ -1,9 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import InputDateForm from "./components/InputDateForm";
+import InputTimeForm from "./components/InputTimeForm";
+import { v4 as uuidv4 } from "uuid";
 
 {
   /*https://react-hook-form.com/form-builder */
 }
+
+const iduuid = uuidv4();
+console.log(iduuid);
 
 function BookingForm() {
   const {
@@ -18,53 +24,69 @@ function BookingForm() {
 
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <div className="card text-left m-5">
-      <div className="card-header text-center">
-        {" "}
-        Boka bastu/bord/omkäldningsrum
+    <div className="card text-left m-5 text-center">
+      <div className="card-header text-center mt-2">
+        <h5>Boka bastu/bord/omkäldningsrum</h5>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div class="form-check ms-5 mt-5">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value=""
-            id="flexCheckDefault"
-            placeholder="sauna"
-            {...register("sauna", {})}
-          />
-          <label class="form-check-label" for="flexCheckDefault">
-            Bastu
-          </label>
+        <div className="d-inline-flex flex-column">
+          <h4 className="ms-5 mt-5">Vad vill du boka?</h4>
+          <div className="form-check ms-5 mt-0">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+              placeholder="sauna"
+              {...register("sauna", {})}
+            />
+            <label className="form-check-label" htmlFor="flexCheckDefault">
+              <h5>Bastu</h5>
+            </label>
+          </div>
+
+          <div className="form-check ms-5">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+              placeholder="table"
+              {...register("table", {})}
+            />
+            <label className="form-check-label" htmlFor="flexCheckDefault">
+              <h5>Bordtennisbord</h5>
+            </label>
+          </div>
+
+          <div className="form-check ms-5">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              value=""
+              id="flexCheckDefault"
+              placeholder="lockerroom"
+              {...register("lockerroom", {})}
+            />
+            <label className="form-check-label" htmlFor="flexCheckDefault">
+              <h5>Omklädningsrum</h5>
+            </label>
+          </div>
         </div>
 
-        <div class="form-check ms-5">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value=""
-            id="flexCheckDefault"
-            placeholder="table"
-            {...register("table", {})}
-          />
-          <label class="form-check-label" for="flexCheckDefault">
-            Bastu
-          </label>
+        <div className="d-inline-flex flex-column m-5">
+          <h4>Vilken dag?</h4>
+          <InputDateForm />
+        </div>
+        <div className="d-inline-flex flex-column m-5">
+          <h4>Från tid?</h4>
+          <InputTimeForm />
         </div>
 
-        <div class="form-check ms-5">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            value=""
-            id="flexCheckDefault"
-            placeholder="lockerroom"
-            {...register("lockerroom", {})}
-          />
-          <label class="form-check-label" for="flexCheckDefault">
-            Bastu
-          </label>
+        <div className="d-inline-flex flex-column m-5">
+          <h4>Till tid?</h4>
+          <InputTimeForm />
         </div>
 
         {/* register your input into the hook by invoking the "register" function */}
@@ -74,8 +96,9 @@ function BookingForm() {
             className="form-control"
             id="floatingInput"
           />
-          <label for="floatingInput">Namn</label>
+          <label htmlFor="floatingInput">Namn</label>
         </div>
+
         {/* include validation with required or other standard HTML validation rules */}
         <div className="form-floating m-5">
           <input
@@ -84,10 +107,15 @@ function BookingForm() {
             id="floatingInput"
           />
 
-          <label for="floatingInput"></label>
+          <label htmlFor="floatingInput">E-post</label>
         </div>
+
         {/* errors will return when field validation fails  */}
-        {errors.exampleRequired && <span>This field is required</span>}
+        {errors.exampleRequired && (
+          <div className="text-center">
+            <span className="mark">Informationen är obligatorisk!</span>
+          </div>
+        )}
 
         <input type="submit" className="btn  btn-light m-5" />
       </form>
