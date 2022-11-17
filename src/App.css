@@ -1,7 +1,13 @@
+.nav {
+  opacity: 0.6;
+}
 .App {
-  min-height: 80vh;
-  background-color: #353f53;
   font-family: monospace;
+}
+
+.bg-image{
+  background-image: url("bg.jpg");
+  background-size: cover;
 }
 
 .App-logo {
@@ -16,20 +22,17 @@
 }
 
 .App-header {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  opacity: 0.6;
 }
 
 .App-header h1{
-  background-color: rgb(101, 106, 128);
   font-family:'Courier New', Courier, monospace;
   font-size: 2em;
-  margin: 0;
-  padding: 1rem;
+  color: #000000;
 }
 
 .App-header p{
@@ -46,7 +49,6 @@
   list-style: decimal-leading-zero;
   list-style-type:lower-greek;
   text-align: left;
-  margin: 1rem;
 }
 
 .App-link {

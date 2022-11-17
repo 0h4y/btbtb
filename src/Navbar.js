@@ -5,13 +5,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = () => 
   return (
     <>
-      <nav className="navbar navbar-expand-sm navbar-light bg-light bg-gradient">
+      <nav className=" border-bottom-4 fixed-top border-dark navbar navbar-expand-sm navbar-light bg-light bg-gradient p-1">
         <div className="container-fluid d-flex flex-row-reverse">
           <button
-            className="navbar-brand p-1 bg-dark bg-gradient text-white"
+            className="navbar-{brand p-1 bg-dark bg-gradient text-white"
             href="#"
           >
             BTBTB-bordtennisbrödernastisdagsbollar
